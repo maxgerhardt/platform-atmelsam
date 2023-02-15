@@ -1,0 +1,72 @@
+{
+    "build": {
+      "arduino": {
+          "ldscript": "8KB_Bootloader/flash_256KB.ld"
+      },
+      "core": "canfduino",
+      "cpu": "cortex-m0plus",
+      "extra_flags": [
+        "-DARDUINO_SAMD_ZERO",
+        "-D__SAMC21G18A__",
+        "-DARM_MATH_CM0PLUS",
+        "-DFLOAT_BOTH_DOUBLES_ONLY",
+        "-DTIMER_732Hz",
+        "-DCONFIG_H_DISABLED",
+        "-DCLOCKCONFIG_INTERNAL",
+        "-DUSB_DISABLED",
+        "-DTHREE_UART",
+        "-DONE_WIRE",
+        "-DONE_SPI",
+        "-D__8KB_BOOTLOADER__ "
+      ],
+      "f_cpu": "48000000L",
+      "hwids": [
+        [
+          "0x16D0",
+          "0x0856"
+        ],
+        [
+          "0x0403",
+          "0x6015"
+        ],
+        [
+          "0x10C4",
+          "0xEA60"
+        ]
+      ],
+      "mcu": "samd21c18a",
+      "usb_product": "CANFDuino",
+      "variant": "canfduino"
+    },
+    "debug": {
+      "jlink_device": "ATSAMC21G18A",
+      "openocd_chipname": "at91samc21g18",
+      "openocd_target": "at91samdXX",
+      "svd_path": "ATSAMC21G18A.svd"
+    },
+    "frameworks": [
+      "arduino"
+    ],
+    "name": "Arduino Zero (Programming/Debug Port)",
+    "upload": {
+      "disable_flushing": true,
+      "maximum_ram_size": 32768,
+      "maximum_size": 253952,
+      "native_usb": false,
+      "offset_address": "0x2000",
+      "protocol": "sam-ba",
+      "protocols": [
+        "sam-ba",
+        "cmsis-dap",
+        "blackmagic",
+        "jlink",
+        "atmel-ice"
+      ],
+      "require_upload_port": true,
+      "use_1200bps_touch": true,
+      "wait_for_upload_port": true
+    },
+    "url": "https://togglebit.net/product/canfduino/",
+    "vendor": "Togglebit"
+  }
+  

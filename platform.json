@@ -66,6 +66,11 @@
       "owner": "platformio",
       "version": "~1.7.10"
     },
+    "framework-arduino-samd-canfduino": {
+      "type": "framework",
+      "optional": true,
+      "version": "https://github.com/maxgerhardt/CANFDuino.git"
+    },
     "framework-arduino-samd-seeed": {
       "type": "framework",
       "optional": true,
