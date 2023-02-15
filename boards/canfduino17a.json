@@ -1,13 +1,13 @@
 {
     "build": {
       "arduino": {
-          "ldscript": "8KB_Bootloader/flash_256KB.ld"
+          "ldscript": "8KB_Bootloader/flash_128KB.ld"
       },
       "core": "canfduino",
       "cpu": "cortex-m0plus",
       "extra_flags": [
         "-DARDUINO_SAMD_ZERO",
-        "-D__SAMC21G18A__",
+        "-D__SAMC21G17A__",
         "-DARM_MATH_CM0PLUS",
         "-DFLOAT_BOTH_DOUBLES_ONLY",
         "-DTIMER_732Hz",
@@ -34,24 +34,24 @@
           "0xEA60"
         ]
       ],
-      "mcu": "samd21c18a",
-      "usb_product": "CANFDuino",
+      "mcu": "samd21c17a",
+      "usb_product": "CANFDuino17A",
       "variant": "canfduino"
     },
     "debug": {
-      "jlink_device": "ATSAMC21G18A",
-      "openocd_chipname": "at91samc21g18",
+      "jlink_device": "ATSAMC21G17A",
+      "openocd_chipname": "at91samc21g17",
       "openocd_target": "at91samdXX",
-      "svd_path": "ATSAMC21G18A.svd"
+      "svd_path": "ATSAMC21G17A.svd"
     },
     "frameworks": [
       "arduino"
     ],
-    "name": "CANFDuino",
+    "name": "CANFDuino17A",
     "upload": {
       "disable_flushing": true,
-      "maximum_ram_size": 32768,
-      "maximum_size": 253952,
+      "maximum_ram_size": 16384,
+      "maximum_size": 122880,
       "native_usb": false,
       "offset_address": "0x2000",
       "protocol": "sam-ba",
