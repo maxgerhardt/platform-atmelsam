@@ -75,6 +75,16 @@ class AtmelsamPlatform(PlatformBase):
                 self.packages["tool-bossac"]["version"] = "~1.10700.0"
                 self.packages["framework-cmsis"]["version"] = "~1.40500.0"
                 self.packages["framework-cmsis-atmel"]["version"] = "~1.1.0"
+            if build_core in ("wimod"):
+                # GCC 4.8.3 used
+                self.packages["toolchain-gccarmnoneeabi"][
+                    "version"] = ">=1.40803.0,<1.40805.0"
+                # bossac 1.7.0 used
+                self.packages["tool-bossac"]["version"] = "~1.10700.0"
+                # CMSIS 4.5.0
+                self.packages["framework-cmsis"]["version"] = "~1.40500.0"
+                # CMSIS-Atmel 1.1.0
+                self.packages["framework-cmsis-atmel"]["version"] = "~1.1.0"
 
         if (
             board.get("build.core", "") in ("adafruit", "seeed", "sparkfun")

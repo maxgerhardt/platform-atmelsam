@@ -102,6 +102,12 @@
       "owner": "platformio",
       "version": "~1.0.6"
     },
+    "framework-arduino-samd-wimod": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "https://github.com/maxgerhardt/framework-wimodino.git"
+    },
     "framework-cmsis": {
       "type": "framework",
       "optional": true,
